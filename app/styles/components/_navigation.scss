@@ -1,0 +1,24 @@
+.ui.menu {
+    background-color: $nav-background;
+    border-radius: 0;
+    border: none;
+    margin-top: 0;
+}
+
+.ui.menu .item {
+    color: $nav-header-color;
+}
+
+
+.ui.menu .active.item {
+    color: $nav-text-color;
+}
+
+.ui.menu .click.item:hover {
+    color: $nav-text-color-hover;
+}
+
+
+.ui.menu .click.active.item:hover {
+    color: $nav-text-color-hover;
+}
