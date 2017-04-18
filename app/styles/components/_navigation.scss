@@ -9,16 +9,18 @@
     color: $nav-header-color;
 }
 
-
-.ui.menu .active.item {
+.ui.menu .click.item {
     color: $nav-text-color;
 }
 
-.ui.menu .click.item:hover {
-    color: $nav-text-color-hover;
+
+.ui.menu .active.item {
+    color: $nav-text-color;
+    font-weight: bold;
+    background: rgba(0,0,0,.5);
 }
 
-
-.ui.menu .click.active.item:hover {
-    color: $nav-text-color-hover;
+.ui.menu .click.item:hover {
+    color: $nav-text-color;
+    background: rgba(0,0,0,.2);
 }
