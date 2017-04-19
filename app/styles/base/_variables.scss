@@ -2,6 +2,8 @@
 $grey: #333333;
 $light: #bbbbbb;
 $blue: #4183C4;
+$light-red: #d0a9a9;
+$red: #db2828;
 
 // Navigation colors
 $nav-background: $grey;
@@ -19,3 +21,7 @@ $form-border-color: $blue;
 $form-button-color: $clock-bg-color;
 $form-button-hover-color: $clock-border-color;
 $form-text-color: white;
+
+// Controls
+$neg-bg-color: $light-red;
+$neg-bg-color-hover: $red;

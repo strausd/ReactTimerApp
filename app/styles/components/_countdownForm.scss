@@ -7,12 +7,12 @@
     border-color: $form-border-color;
 }
 
-.ui.button {
+.ui.button.primary, .ui.button.primary:focus {
     background: $form-button-color;
     color: $form-text-color;
 }
 
-.ui.button:hover {
+.ui.button.primary:hover {
     background: $form-button-hover-color;
     color: $form-text-color;
 }

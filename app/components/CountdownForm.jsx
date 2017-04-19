@@ -18,7 +18,7 @@ var CountdownForm = React.createClass({
                             <input type="text" placeholder="Enter time in seconds" ref="seconds"/>
                         </div>
                         <div className="form-element">
-                            <button className="ui fluid button">Start</button>
+                            <button className="ui primary fluid button">Start</button>
                         </div>
                     </form>
                 </div>

@@ -15,7 +15,7 @@ var Controls = React.createClass({
         var renderStartStopButton = () => {
             if(countdownStatus === 'started') {
                 return (
-                    <button className="ui button fluid" onClick={this.onStatusChange('paused')}>Pause</button>
+                    <button className="ui primary button fluid" onClick={this.onStatusChange('paused')}>Pause</button>
                 );
             } else if (countdownStatus === 'paused') {
                 return (
@@ -28,7 +28,7 @@ var Controls = React.createClass({
                 <div className="three wide column">
                     <div className="controls">
                         {renderStartStopButton()}
-                        <button className="negative ui button basic fluid" onClick={this.onStatusChange('stopped')}>Clear</button>
+                        <button className="negative ui button fluid" onClick={this.onStatusChange('stopped')}>Clear</button>
                     </div>
                 </div>
             </div>
