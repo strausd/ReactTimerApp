@@ -6,42 +6,53 @@ var Timer = React.createClass({
     getInitialState: function () {
         return {
             count: 0,
-            countdownStatus: 'paused'
+            timerStatus: 'paused'
         };
     },
-    handleStatusChange: function (newStatus) {
-        switch (newStatus) {
-            case 'started':
-                this.startTimer();
-                break;
-            case 'stopped':
-                this.setState({count: 0});
-            case 'paused':
-                clearInterval(this.timer);
-                this.timer = undefined;
-                this.setState({
-                    countdownStatus: 'paused'
-                });
+    componentDidUpdate: function (prevProps, prevState) {
+        if (this.state.timerStatus !== prevState.timerStatus) {
+            switch (this.state.timerStatus) {
+                case 'started':
+                    this.startTimer();
+                    break;
+                case 'stopped':
+                    this.stopTimer();
+                    this.setState({
+                        count: 0
+                    });
+                    break;
+                case 'paused':
+                    this.stopTimer();
+                    break;
+            }
         }
+    },
+    handleStatusChange: function (newStatus) {
+        this.setState({
+            timerStatus: newStatus
+        });
     },
     componentWillUnmount: function () {
         this.handleStatusChange('stopped');
     },
     startTimer: function () {
-        this.setState({countdownStatus: 'started'});
         this.timer = setInterval(() => {
             this.setState({
                 count: this.state.count + 1
             });
         }, 1000);
     },
+    stopTimer: function () {
+        clearInterval(this.timer);
+        this.timer = undefined;
+    },
     render: function () {
-        var {count, countdownStatus} = this.state;
+        var {count, timerStatus} = this.state;
         return (
             <div>
                 <h1 className="page-title">Timer App</h1>
                 <Clock totalSeconds={count}/>
-                <Controls countdownStatus={countdownStatus} onStatusChange={this.handleStatusChange}/>
+                <Controls countdownStatus={timerStatus} onStatusChange={this.handleStatusChange}/>
             </div>
         );
     }

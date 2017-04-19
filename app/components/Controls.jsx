@@ -17,7 +17,7 @@ var Controls = React.createClass({
                 return (
                     <button className="ui primary button fluid" onClick={this.onStatusChange('paused')}>Pause</button>
                 );
-            } else if (countdownStatus === 'paused') {
+            } else {
                 return (
                     <button className="ui primary button fluid" onClick={this.onStatusChange('started')}>Start</button>
                 );
