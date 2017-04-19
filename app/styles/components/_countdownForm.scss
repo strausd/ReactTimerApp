@@ -1,0 +1,18 @@
+.form-element {
+    margin-bottom: 1rem;
+}
+
+.ui.input input:focus,
+.ui.input.focus input {
+    border-color: $form-border-color;
+}
+
+.ui.button {
+    background: $form-button-color;
+    color: $form-text-color;
+}
+
+.ui.button:hover {
+    background: $form-button-hover-color;
+    color: $form-text-color;
+}
