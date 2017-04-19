@@ -24,7 +24,7 @@ var Controls = React.createClass({
             }
         };
         return (
-            <div className="ui grid centered">
+            <div className="ui stackable grid centered">
                 <div className="three wide column">
                     <div className="controls">
                         {renderStartStopButton()}

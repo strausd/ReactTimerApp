@@ -11,7 +11,7 @@ var CountdownForm = React.createClass({
     },
     render: function () {
         return (
-            <div className="ui grid centered">
+            <div className="ui stackable grid centered">
                 <div className="three wide column">
                     <form ref="form" onSubmit={this.onSubmit} className="countdown-form">
                         <div className="ui fluid input form-element">
